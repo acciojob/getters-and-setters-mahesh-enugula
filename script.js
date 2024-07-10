@@ -1,23 +1,23 @@
 //complete this code
 class Person {
-	constructor(name, age){
-		this.name = name;
-		this.age = age;
-	}
-}
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+    }
 
- get name() {
-        return this.name;
+    // Getter for name
+    get name() {
+        return this._name;
     }
 
     // Setter for age
     set age(age) {
-        this.age = age;
+        this._age = age;
     }
 
     // Getter for age to verify the change
     get age() {
-        return this.age;
+        return this._age;
     }
 }
 
@@ -36,18 +36,15 @@ class Teacher extends Person {
 }
 
 // Example usage
-const Person = win.Person;
 const person = new Person("John", 25);
 console.log(person.name); // Output: John
 
 person.age = 30;
 console.log(person.age); // Output: 30
 
-const Student = win.Student;
 const student = new Student("Alice", 22);
 student.study(); // Output: Alice is studying
 
-const Teacher = win.Teacher;
 const teacher = new Teacher("Bob", 40);
 teacher.teach(); // Output: Bob is teaching
 
