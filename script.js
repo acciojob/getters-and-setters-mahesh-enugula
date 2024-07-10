@@ -36,16 +36,19 @@ class Teacher extends Person {
 }
 
 // Example usage
-const person = win Person("John", 25);
+const Person = win.Person;
+const person = new Person("John", 25);
 console.log(person.name); // Output: John
 
 person.age = 30;
 console.log(person.age); // Output: 30
 
-const student = win Student("Alice", 22);
+const Student = win.Student;
+const student = new Student("Alice", 22);
 student.study(); // Output: Alice is studying
 
-const teacher = win Teacher("Bob", 40);
+const Teacher = win.Teacher;
+const teacher = new Teacher("Bob", 40);
 teacher.teach(); // Output: Bob is teaching
 
 // Do not change the code below this line
